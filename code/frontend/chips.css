@@ -1,0 +1,100 @@
+/* Pills (επιλογές υπηρεσιών) */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pill {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.05s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill--active {
+  border-color: #5b9cff;
+  background: #eaf2ff;
+}
+
+/* Chips (επιλεγμένες υπηρεσίες + λίστα) */
+.chips-row, .chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2f7;
+  font-size: 13px;
+}
+.chip--soft {
+  background: #f4f6f9;
+}
+
+.chip__x {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+}
+.chip__x:hover { opacity: 1; }
+
+/* Βασικά utilities που ήδη χρησιμοποιείς */
+.card { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-bottom: 24px; }
+.card-title { margin: 0 0 8px; font-size: 18px; }
+.form-grid { display: grid; gap: 12px; max-width: 560px; }
+.form-field { display: grid; gap: 6px; }
+.input, .textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.textarea { resize: vertical; }
+
+.form-actions { margin-top: 6px; }
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #1e56ca; }
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.btn-danger:hover { background: #d83c3c; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.table th, .table td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
+
+.muted { margin-top: 8px; font-size: 12px; opacity: 0.75; }
