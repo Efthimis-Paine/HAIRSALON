@@ -102,7 +102,7 @@ app.delete('/api/appointments/:id', async (req, res, next) => {
 
 // generic error handler (επιστρέφει καθαρό JSON στο React)
 app.use((err, req, res, _next) => {
-  console.error('❌ API error:', err);
+  console.error('API error:', err);
   res
     .status(err.status || 500)
     .json({ error: err.message || 'Internal Server Error' });
@@ -111,7 +111,7 @@ app.use((err, req, res, _next) => {
 // bootstrap: DB sync + demo customers
 const PORT = 3001;
 app.listen(PORT, async () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
   try {
     await sequelize.authenticate();
     await sequelize.sync({ alter: true });
@@ -127,8 +127,9 @@ app.listen(PORT, async () => {
 	console.log('👶 Seeded demo customers (IDs 1,2)');
     }
 
-    console.log('✅ DB ready');
+    console.log('DB ready');
   } catch (err) {
-    console.error('❌ DB error at startup:', err);
+    console.error('DB error at startup:', err);
   }
+
 });
